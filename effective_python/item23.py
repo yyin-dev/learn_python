@@ -94,5 +94,3 @@ for key, amount in increments:
     result[key] += amount
 assert counter.added == 2
 print(dict(result))
-
-

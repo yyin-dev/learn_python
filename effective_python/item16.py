@@ -16,16 +16,15 @@ def index_words(text):
     return result
 
 
-address = 'Four score and seven years ago...'
 address = 'Four score and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal.'
 result = index_words(address)
 print(result[:3])
 
 
 # A better way to write this function is using a generator. Generators are 
-# functions that use yield expressions. When called, generator functions do not 
+# functions that use *yield* expressions. When called, generator functions do not 
 # actually run but instead immediately return an iterator. With each call to 
-# the next built-in function, the iterator will advance the generator to its 
+# the next() function, the iterator will advance the generator to its 
 # next yield expression. Each value passed to yield by the generator will be 
 # returned by the iterator to the caller. 
 
@@ -63,12 +62,13 @@ def index_file(handle):
 address_lines="""Four score and seven years ago our fathers brought forth on this
 continent a new nation, conceived in liberty, and dedicated to the proposition 
 that all men are created equal."""
+
 with open('address.txt', 'w') as f:
     f.write(address_lines)
 
 from itertools import islice
 with open('address.txt', 'r') as f:
     it = index_file(f)
-    print(list(it))
+    # print(list(it))
     results = islice(it, 0, 3)
     print(list(results))

@@ -44,9 +44,9 @@ print('Found:', found)  # Wrong!
 print(numbers)
 
 
-# When you ***reference*** a variable in an expressino, Python interpreter 
+# When you ***reference*** a variable in an expression, Python interpreter 
 # resolve names in the following order:
-# 1. current function scopt;
+# 1. current function scope;
 # 2. enclosing scopt;
 # 3. scope of the module, i.e. global scope;
 # 4. built-in scope (that contains functions like len and str)

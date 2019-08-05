@@ -42,7 +42,7 @@ print(flat)
 
 """ 
 List comprehensions also support multiple if conditions. Multiple conditions 
-at the same loop level are an implicit and expression. For example, say you 
+at the same loop level are an implicit 'and' expression. For example, say you 
 want to filter a list of numbers to only even values greater than four. 
 These two list comprehensions are equivalent.
 """

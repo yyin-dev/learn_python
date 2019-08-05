@@ -59,9 +59,9 @@ print('Should be (5 * 5) + 2 = 27 but is', foo.value)
 # back to 5 when MyBaseClass.__init__ gets called a second time.
 
 
-# Built-in function super() is introduced and defined the method resolution 
+# Built-in function super() is introduced and defined the method resolution
 # order (MRO). The MRO standardizes which superclasses are initialized
-# before others (e.g., depth-first, left-to-right). It also ensures that common 
+# before others (e.g., depth-first, left-to-right). It also ensures that common
 # superclasses in diamond hierarchies are only run once.
 
 
@@ -99,18 +99,18 @@ pprint(GoodWay.mro())
 #  <class '__main__.MyBaseClass'>,
 #  <class 'object'>]
 
-# When I call GoodWay(5), it in turn calls TimesFiveCorrect.__init__, which
+# When I call GoodWay(5), it in turn calls TimesFiveCorrect.__init__, and
 # calls PlusTwoCorrect.__init__, which calls MyBaseClass.__init__. Once
 # this reaches the top of the diamond(i.e. the most base class, highest in the
 # hierarchy), then all of the initialization methods(i.e. constructor) are 
-# invoked from the base class towards the child class. 
+# invoked from the base class towards the child class.
 #               BaseClass
 #           /               \
 #   TimesFiveCorrect    PlusTwoCorrect
 #           \               /
 #               GoodWay
 # Just like constructor chaining in Java. The derived class's constructor can
-# only be called after the base class. 
+# only be called after the base class.
 
 # Python 2 version is not clear and requires a lot of work if you want to change
 # the class hierarchy. Python 3 version is as flollows. 

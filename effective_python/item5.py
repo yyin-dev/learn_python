@@ -53,6 +53,6 @@ assert b == a and b is a        # a and p points to the same object
 print('Before', a)
 a[:] = [101, 102, 103]
 assert a is b           # Still the same list object
-print('After ', a)      # Now has different contents
+print('After ', a)     
 print('After ', b)
 

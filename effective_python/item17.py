@@ -7,8 +7,8 @@ os.chdir("C:/Users/musicman/Desktop/learn_python/effective_python")
 # Iterate over the list argument
 def normalize(numbers):
     # sum() function iterates over the argument, which must be an iterable.
-    # Thus, if the argument is a generator, then it is exhausted after sum().
-    # However, no exception would be raised.
+    # Thus, if the argument is a generator, then the iterator is exhausted after
+    # sum(). However, no exception would be raised.
     total = sum(numbers)  # iterate protocol in effect
     result = []
     for value in numbers:  # iterate protocol in effect
@@ -46,7 +46,7 @@ print(list(it))  # Already exhausted
 
 
 # Surprisingly, calling normalize() on the generator’s return value produces no
-# results. The cause is that an iterator only produces its results only once.
+# results. The cause is that an iterator produces its results only once.
 # If you iterate over an iterator or generator that has already raised a
 # StopIteration exception, you won’t get any results the second time around.
 #
@@ -93,8 +93,8 @@ print(percentages)
 #   -> foo.__iter__ (returns an iterator implmenting __next__)
 # Then iterate over the returned iterator object.
 #
-# Practically speaking you can achieve all of this behavior for your classes
-# by implementing the __iter__ method as a generator.
+# Practically speaking, you can achieve all of this behavior for your classes
+# by implementing the __iter__ method as a generator(i.e. using yield).
 
 
 class ReadVisits(object):

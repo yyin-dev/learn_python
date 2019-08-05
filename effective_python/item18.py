@@ -42,13 +42,13 @@ log('Hi there')  # Much betters
 favorites = [7, 33, 99]
 log('Favorite colors', *favorites)
 
-# YY: This * operator mechanism in some sense to the dereference operator in 
-# C++. 
+# YY: This * operator mechanism is similar to the dereference operator in C++. 
 # C++:
 # int * i_ptr = new int(5); 
 # int derefed = * i_ptr;
 # In C++, when * is used at declaration, it means the variable is a pointer.
 # When * is used on a variable that is already defined, it means dereference. 
+# 
 # Python:
 # def func(*args):
 #   for arg in args:

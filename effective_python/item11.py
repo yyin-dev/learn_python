@@ -3,11 +3,9 @@ os.chdir("C:/Users/musicman/Desktop/learn_python/effective_python")
 
 """ Use zip to Process Iterators in Parallel """
 
-""" basic list comprehension """
 names = ['Cecilia', 'Lise', 'Marie']
 letters = [len(n) for n in names]
 print(letters)
-
 
 """ iterate two lists in parallel with for loop """
 longest_name = None
@@ -36,13 +34,13 @@ print(longest_name)
 
 """ 
 The problem with the approaches is that, we want to iterate over 2 lists 
-at the same time, but we can easily do this and have to use index. Introducing
-index reduces the readability.
+at the same time, but we cannot easily do this and have to use index. 
+Introducing index reduces the readability.
 """
 
 
-""" zip() """
-"""
+""" zip() 
+
 zip() wraps two or more iterators with a lazy generator. The zip generator 
 yields tuples containing the next value from each iterator. The resulting code 
 is much cleaner than indexing into multiple lists.

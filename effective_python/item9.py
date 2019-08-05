@@ -23,6 +23,7 @@ with open('tmp.txt', 'w') as f:
         f.write('a' * random.randint(0, 80))
         f.write('\n')
 
+
 """ Use list comprehension """
 value = [len(x) for x in open('tmp.txt')]
 print(value)
@@ -30,13 +31,12 @@ print(value)
 """ Use generator expression to get an iterator """ 
 """ 
 A generator expression is created by putting list-comprehension-like syntax 
-between () characters. The code "len(x) for x in open('my_file.txt')" is 
+between (). The code "len(x) for x in open('my_file.txt')" is 
 not executed at all. The whole expression evaluates to an iterator and doesn't
 make any further progress. 
 The returned iterator can be advanced one step at a time to produce the next
 output from the generator expression as needed, using the next function. You
-can also use the for loop to iterate with the generator.
-Note that you can use for loop over the iterator for once.
+can also use the for loop to iterate with the generator for once.
 """
 it = (len(x) for x in open('tmp.txt'))
 print(it)
@@ -56,4 +56,3 @@ it = (len(x) for x in open('tmp.txt'))
 roots = ((x, x*2) for x in it)
 for e in roots:
     print(e)
-
